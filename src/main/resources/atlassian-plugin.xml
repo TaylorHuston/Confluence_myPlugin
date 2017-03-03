@@ -9,16 +9,22 @@
 
     <!-- add our i18n resource -->
     <resource type="i18n" name="i18n" location="myConfluenceMacro"/>
-    
+
     <!-- add our web resources -->
     <web-resource key="myConfluenceMacro-resources" name="myConfluenceMacro Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
-        
+
         <resource type="download" name="myConfluenceMacro.css" location="/css/myConfluenceMacro.css"/>
         <resource type="download" name="myConfluenceMacro.js" location="/js/myConfluenceMacro.js"/>
         <resource type="download" name="images/" location="/images"/>
 
         <context>myConfluenceMacro</context>
+
+        <xhtml-macro name="helloworld" class="com.atlassian.tutorial.macro.helloworld" key='helloworld-macro'>
+            <description key="helloworld.macro.desc"/>
+            <category name="formatting"/>
+            <parameters/>
+        </xhtml-macro>
     </web-resource>
-    
+
 </atlassian-plugin>
